@@ -1,17 +1,20 @@
-
-
 public class Circle {
 
+	// Creates variables
 	private double radius;
 	
 	private int x;
 	private int y;
 	
-	public void getX(int a) {
-		x = a;
+	// if no fields are set
+	public Circle() {
+		radius = 5;
+		x = 0;
+		y = 0;
 	}
 	
-	public void getY(int b) {
+	public void setPos(int a, int b) {
+		x = a;
 		y = b;
 	}
 	
@@ -19,15 +22,15 @@ public class Circle {
 		radius = r;
 	}
 	public double getArea() {
-		return Math.PI *radius*radius;	
+		return Math.round(Math.PI *radius*radius * 100.00)/100.00;
 	}
 	
 	public double getCircumference() {
-		return Math.PI*2*radius;
+		return Math.round(Math.PI*2*radius * 100.00)/100.00;
 	}
 	
 	public double getDiameter() {
-		return 2*radius;
+		return Math.round(2*radius * 100.00)/100.00;
 	}
 
 }
