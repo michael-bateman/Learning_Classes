@@ -8,18 +8,19 @@ public class CircleRunner {
 		Scanner s = new Scanner(System.in); // This creates a scanner to take inputs
 		
 		double radius = 0;
+		String name;
 		
 		Circle c1 = new Circle();
+		
+		System.out.print("What is the name of the circle? ");
+		name = s.next();
 		
 		System.out.print("What is the radius? ");
 		radius = s.nextDouble();
 		
-		c1.setRadius(radius);
+		c1.setInfo(radius, name);
 		
-		System.out.println("The area is " + c1.getArea());
-		System.out.println("The circumference is " + c1.getCircumference());
-		System.out.println("The diameter is " + c1.getDiameter());
-		
+		System.out.println(c1);
 	}
 	
 }

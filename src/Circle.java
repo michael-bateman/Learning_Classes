@@ -5,6 +5,7 @@ public class Circle {
 	
 	private int x;
 	private int y;
+	private String name;
 	
 	// if no fields are set
 	public Circle() {
@@ -18,9 +19,12 @@ public class Circle {
 		y = b;
 	}
 	
-	public void setRadius(double r) {
+	public void setInfo(double r, String n) {
 		radius = r;
+		name = n;
+		
 	}
+	
 	public double getArea() {
 		return Math.round(Math.PI *radius*radius * 100.00)/100.00;
 	}
@@ -31,6 +35,21 @@ public class Circle {
 	
 	public double getDiameter() {
 		return Math.round(2*radius * 100.00)/100.00;
+	}
+	
+	/**
+	 * toString is a special method. It is recognized by Java.
+	 * It is automatically called when we treat the object like a String.
+	 * 
+	 * For example:
+	 * 
+	 * System.out.println(c1);
+	 * 
+	 * The above line would actually called this reference which is the hex or unless otherwise identified.
+	 */
+	
+	public String toString() {
+		return "Circle: " + name + "\nThe area is " + getArea() + "\nThe circumference is " + getCircumference() + "\nThe diameter is " + getDiameter();
 	}
 
 }
